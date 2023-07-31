@@ -3568,15 +3568,6 @@ body.lock {
   height: 100vh;
   overflow: auto;
 }
-.login-page .wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 0;
-  flex-direction: column;
-}
 
 .login-header {
   padding: 37px 100px 35px 70px;
@@ -3706,19 +3697,11 @@ body.lock {
 }
 
 .login-main {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  font-size: 0;
-  flex-direction: column;
   padding: 0 345px 35px 225px;
 }
 @media (max-width: 1600px) {
   .login-main {
     padding: 0 300px 35px 200px;
-    flex: 1 1 100%;
   }
 }
 @media (max-width: 1452px) {
@@ -3765,24 +3748,17 @@ body.lock {
   font-size: 0;
   align-items: center;
 }
-@media (max-width: 1600px) {
-  .login-main__body {
-    flex: 1 1 100%;
-  }
-}
 @media (max-width: 767.98px) {
   .login-main__body {
     flex-direction: column;
     justify-content: center;
   }
 }
+.login-main__image {
+  flex: 1 1 100%;
+}
 .login-main__image img {
   max-width: 100%;
-}
-@media (min-width: 767.98px) {
-  .login-main__image {
-    flex: 1 1 100%;
-  }
 }
 @media (max-width: 767.98px) {
   .login-main__image {
