@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Вхід у HealthyWay</title>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="wrapper">
+            <header class="login-header">
+                <div class="login-header__row">
+                    <a href="" class="login-header__logo">
+                        <img src="img/login-page/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <div class="login-header__registration">
+                        <span>Немає акаунту HealthyWay?</span>
+                        <a href="">Зареєструйтесь</a>
+                    </div>
+                </div>
+            </header>
+            <main class="login-main">
+                <div class="login-main__body">
+                    <div class="login-main__image">
+                        <img src="img/login-page/main-img.png" alt="main-img">
+                    </div>
+                    <div class="login-main__content">
+                        <form action="#" class="login-main__form form-login">
+                            <h1 class="form-login__title">Вхід у <span>HealthyWay</span></h1>
+                            <div class="form-login__item">
+                                <label for="formLoginEmail" class="form-login__label">E-mail</label>
+                                <input id="formLoginEmail" placeholder="E-mail" autocomplete='off' type='email'
+                                    name='form[]' class='form-login__input'>
+                            </div>
+                            <div class="form-login__item">
+                                <label for="formLoginPassword" class="form-login__label">Пароль</label>
+                                <input id="formLoginPassword" placeholder="Пароль" autocomplete='off' type='password'
+                                    name='form[]' class='form-login__input'>
+                            </div>
+                            <div class="form-login__item">
+                                <div class="form-login__checkbox-block">
+                                    <div class="form-login__checkbox checkbox-form-login">
+                                        <input id="formLoginRemember" checked type='checkbox' name='form[]'
+                                            class='checkbox-form-login__input'>
+                                        <label for="formLoginRemember" class="checkbox-form-login__label">
+                                            Запам'ятати мене
+                                        </label>
+                                    </div>
+                                    <a href="" class="form-login__forget">Забули пароль?</a>
+                                </div>
+                            </div>
+                            <button type='submit' class='form-login__btn btn'>Увійти</button>
+                            <div class="form-login__or">Або</div>
+                            <a href="" class="form-login__azure-btn btn btn_border btn_border-blue">
+                                <img src="img/login-page/azure-icon.svg" alt="azure-icon">
+                                <span>Вхід через Azure AD</span>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
