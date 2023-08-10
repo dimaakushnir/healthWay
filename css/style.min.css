@@ -3253,6 +3253,10 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+.fc-widget-content {
+  overflow: visible !important;
+}
+
 .fc-day-grid {
   display: none;
 }
@@ -3435,10 +3439,6 @@ body::-webkit-scrollbar {
 }
 .fc-view .fc-body tr td:nth-child(2) {
   border-left: 0;
-}
-.fc-view .fc-body tr:last-child td:nth-child(2) {
-  border-radius: 0 0 0 25px;
-  overflow: hidden;
 }
 .fc-view .fc-body .fc-today {
   background-color: transparent !important;
