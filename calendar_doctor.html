@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Календар лікаря</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calendar-doctor">
+            <aside class="calendar-doctor__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item active">
+                                <a href="calender_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/calendar.svg" alt="calendar">
+                                    <span>Календар</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="calendar-doctor__main main-calendar-doctor main-block">
+                <div class="main-calendar-doctor__top-block top-block top-block_doctor">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Іванно!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="doctor_profile_2.html" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="doctor_profile_2.html" class="user-top-block__info">
+                                <span class="user-top-block__surname">Лук'янчук</span>
+                                <span class="user-top-block__name">Іванна</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-calendar-doctor__body main-body">
+                    <div class="main-calendar-doctor__full-calendar full-calendar">
+                        <div class="full-calendar__top">
+                            <button class="full-calendar__btn-event-active" id="showType1Events">Лише активні</button>
+                            <div class="full-calendar__search">
+                                <input placeholder="Пошук..." autocomplete='off' type='text' name='form[]'
+                                    class='full-calendar__search-input'>
+                            </div>
+                            <div class="full-calendar__agenda agenda-full-calendar">
+                                <button class='agenda-full-calendar__button'>Тиждень</button>
+                                <ul class="agenda-full-calendar__list">
+                                    <li class="agenda-full-calendar__list-item" data-dropdown="agendaWeek">Тиждень</li>
+                                    <li class="agenda-full-calendar__list-item" data-dropdown="agendaDay">День</li>
+                                </ul>
+                                <input id="viewSelector" type='text' name='age' value='agendaWeek'
+                                    class='full-calendar__input-hidden'>
+                            </div>
+                        </div>
+                        <div class="full-doctor-calendar" id='calendar-doctor'></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/uk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

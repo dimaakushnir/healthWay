@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Послуги</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dashboard-services">
+            <aside class="dashboard-services__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_doctors.html" class="menu-sidebar__link">
+                                    <img src="img/icons/doctors.svg" alt="doctors">
+                                    <span>Лікарі</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="calendar_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/appointments.svg" alt="appointments">
+                                    <span>Записи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item active">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/services.svg" alt="services">
+                                    <span>Послуги</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="dashboard-services__main main-dashboard-services main-block">
+                <div class="main-dashboard-services__top-block top-block top-block_admin">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Прізвище Ім'я!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="" class="user-top-block__info">
+                                <span class="user-top-block__surname">Прізвище</span>
+                                <span class="user-top-block__name">Ім'я</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-dashboard-services__body main-body">
+                    <div class="main-dashboard-services__top">
+                        <div class="main-dashboard-services__title title-dashboard-big">Послуги</div>
+                        <a href="" class="main-dashboard-services__btn btn_panel btn_panel-create-service">Створити
+                            послугу</a>
+                    </div>
+                    <div class="main-dashboard-services__add-block add-block-dashboard-services">
+                        <div class="add-block-dashboard-services__body">
+                            <form action="#" class="add-block-dashboard-services__form">
+                                <div class="add-block-dashboard-services__title title-dashboard">Створити послугу</div>
+                                <div class="add-block-dashboard-services__row">
+                                    <div
+                                        class="add-block-dashboard-services__item add-block-dashboard-services__item_name">
+                                        <label for="servicesFormName"
+                                            class="add-block-dashboard-services__label label-dashboard">Назва
+                                            послуги</label>
+                                        <input id="servicesFormName" autocomplete='off' type='text' name='form[]'
+                                            value="Назва послуги"
+                                            class='add-block-dashboard-services__input input-dashboard'>
+                                    </div>
+                                    <div
+                                        class="add-block-dashboard-services__item add-block-dashboard-services__item_price">
+                                        <label for="servicesFormPrice"
+                                            class="add-block-dashboard-services__label label-dashboard">Ціна</label>
+                                        <input id="servicesFormPrice" autocomplete='off' type='text' name='form[]'
+                                            value="1000"
+                                            class='add-block-dashboard-services__input add-block-dashboard-services__input_price input-dashboard'>
+                                    </div>
+                                    <div
+                                        class="add-block-dashboard-services__images images-add-block-dashboard-services">
+                                        <label
+                                            class="images-add-block-dashboard-services__label label-dashboard">Фото</label>
+                                        <div class="images-add-block-dashboard-services__content">
+                                            <div class="images-add-block-dashboard-services__item">
+                                                <div class="images-add-block-dashboard-services__preview"></div>
+                                                <input accept=".jpg, .png, .gif" type='file' name='form[]'
+                                                    class='images-add-block-dashboard-services__input-file'>
+                                                <div class="images-add-block-dashboard-services__button">
+                                                    <img src="img/icons/file-input-2.svg" alt="file-input">
+                                                </div>
+                                            </div>
+                                            <div class="images-add-block-dashboard-services__item">
+                                                <div class="images-add-block-dashboard-services__preview"></div>
+                                                <input accept=".jpg, .png, .gif" type='file' name='form[]'
+                                                    class='images-add-block-dashboard-services__input-file'>
+                                                <div class="images-add-block-dashboard-services__button">
+                                                    <img src="img/icons/file-input-2.svg" alt="file-input">
+                                                </div>
+                                            </div>
+                                            <div class="images-add-block-dashboard-services__item">
+                                                <div class="images-add-block-dashboard-services__preview"></div>
+                                                <input accept=".jpg, .png, .gif" type='file' name='form[]'
+                                                    class='images-add-block-dashboard-services__input-file'>
+                                                <div class="images-add-block-dashboard-services__button">
+                                                    <img src="img/icons/file-input-2.svg" alt="file-input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="add-block-dashboard-services__item add-block-dashboard-services__item_description">
+                                    <label for="servicesFormDescription"
+                                        class="add-block-dashboard-services__label label-dashboard">Опис послуги</label>
+                                    <textarea id="servicesFormDescription" name="form[]"
+                                        class="add-block-dashboard-services__textarea textarea-dashboard">Опис...</textarea>
+                                </div>
+                                <button type='submit'
+                                    class='add-block-dashboard-services__btn btn_panel btn_panel-save'>Зберегти</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="main-dashboard-services__row">
+                        <div class="main-dashboard-services__services-list services-list-dashboard-services">
+                            <div class="services-list-dashboard-services__body">
+                                <div class="main-dashboard-services__content">
+                                    <div class="main-dashboard-services__services services-main-dashboard-services">
+                                        <div class="services-main-dashboard-services__body">
+                                            <div
+                                                class="services-main-dashboard-services__content services-main-dashboard-services__content_services">
+                                                <div class="services-main-dashboard-services__scrollbar">
+                                                    <div class="services-main-dashboard-services__items">
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="services-main-dashboard-services__item item-dashboard-services">
+                                                            <div
+                                                                class="item-dashboard-services__top top-item-dashboard-services">
+                                                                <div class="top-item-dashboard-services__click"></div>
+                                                                <div class="top-item-dashboard-services__row">
+                                                                    <div
+                                                                        class="top-item-dashboard-services__name title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        <div>Назва послуги</div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="top-item-dashboard-services__price title-dashboard">
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='services-edit-input'>
+                                                                        Ціна:<span>1000</span><span>₴</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="item-dashboard-services__content content-item-dashboard-services">
+                                                                <div class="content-item-dashboard-services__body">
+                                                                    <div
+                                                                        class="content-item-dashboard-services__description">
+                                                                        Опис</div>
+                                                                    <div class="content-item-dashboard-services__text">
+                                                                        <textarea name="form[]"
+                                                                            class="services-edit-input services-edit-input_textarea"></textarea>
+                                                                        <span>
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей, цуратись насолоди і
+                                                                            вихваляти страждання. Але щоб ви зрозуміли,
+                                                                            звідки виникає це хибне уявлення людей,
+                                                                            цуратись
+                                                                            насолоди і вихваляти страждання. Але щоб ви
+                                                                            зрозуміли, звідки виникає це хибне уявлення
+                                                                            людей, цуратись насолоди і вихваляти
+                                                                            страждання.
+                                                                            Але щоб ви зрозуміли, звідки виникає це
+                                                                            хибне
+                                                                            уявлення людей, цуратись насолоди і
+                                                                            вихваляти
+                                                                            страждання. Але щоб ви зрозуміли, звідки
+                                                                            виникає
+                                                                            це хибне уявлення людей,
+                                                                        </span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="content-item-dashboard-services__images">
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="content-item-dashboard-services__image">
+                                                                            <div class="services-edit-image-block">
+                                                                                <div id="servicesEditPreview"
+                                                                                    class="services-edit-image-preview">
+                                                                                </div>
+                                                                                <input id="servicesEditPreview"
+                                                                                    accept=".jpg, .png, .gif"
+                                                                                    type='file' name='form[]'
+                                                                                    class='services-edit-image-input'>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="content-item-dashboard-services__bnts">
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-edit services-edit-btn">Редагувати</a>
+                                                                        <a href=""
+                                                                            class="content-item-dashboard-services__btn btn-border-delite services-delite-btn">Видалити</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

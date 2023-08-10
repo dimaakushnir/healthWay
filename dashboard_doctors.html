@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Лікарі</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dashboard-doctors">
+            <aside class="dashboard-doctors__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item active">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/doctors.svg" alt="doctors">
+                                    <span>Лікарі</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="calendar_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/appointments.svg" alt="appointments">
+                                    <span>Записи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_services.html" class="menu-sidebar__link">
+                                    <img src="img/icons/services.svg" alt="services">
+                                    <span>Послуги</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="dashboard-doctors__main main-dashboard-doctors main-block">
+                <div class="main-dashboard-doctors__top-block top-block top-block_admin">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Прізвище Ім'я!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="" class="user-top-block__info">
+                                <span class="user-top-block__surname">Прізвище</span>
+                                <span class="user-top-block__name">Ім'я</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-dashboard-doctors__body main-body">
+                    <div class="main-dashboard-doctors__top">
+                        <div class="main-dashboard-doctors__title title-dashboard-big">Лікарі</div>
+                        <a href="" class="main-dashboard-doctors__btn btn_panel btn_panel-add">Додати</a>
+                    </div>
+                    <div class="main-dashboard-doctors__add-block add-block-dashboard-doctors">
+                        <div class="add-block-dashboard-doctors__body">
+                            <form action="#" class="add-block-dashboard-doctors__form">
+                                <div class="add-block-dashboard-doctors__title title-dashboard">Додати лікаря</div>
+                                <div class="add-block-dashboard-doctors__row">
+                                    <div class="add-block-dashboard-doctors__image image-add-block-dashboard-doctors">
+                                        <label for="doctorsFormImage"
+                                            class="image-add-block-dashboard-doctors__label label-dashboard">Фото</label>
+                                        <div class="image-add-block-dashboard-doctors__content">
+                                            <div id="doctorsformPreview"
+                                                class="image-add-block-dashboard-doctors__preview"></div>
+                                            <input id="doctorsFormImage" accept=".jpg, .png, .gif" type='file'
+                                                name='form[]' class='image-add-block-dashboard-doctors__input-file'>
+                                            <div class="image-add-block-dashboard-doctors__button">
+                                                <img src="img/icons/file-input-2.svg" alt="file-input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-block-dashboard-doctors__info">
+                                        <div class="add-block-dashboard-doctors__item">
+                                            <label for="profileFormName"
+                                                class="add-block-dashboard-doctors__label label-dashboard">ПІБ
+                                                лікаря</label>
+                                            <input id="profileFormName" autocomplete='off' type='text' name='form[]'
+                                                value="Прізвище Ім'я По-батькові"
+                                                class='add-block-dashboard-doctors__input input-dashboard'>
+                                        </div>
+                                        <div class="add-block-dashboard-doctors__item">
+                                            <label for="profileFormSpecialty"
+                                                class="add-block-dashboard-doctors__label label-dashboard">Спеціальність</label>
+                                            <input id="profileFormSpecialty" autocomplete='off' type='text'
+                                                name='form[]' value="Спеціальність"
+                                                class='add-block-dashboard-doctors__input input-dashboard'>
+                                        </div>
+                                        <div
+                                            class="add-block-dashboard-doctors__item add-block-dashboard-doctors__item_phone">
+                                            <label for="profileFormPhone"
+                                                class="add-block-dashboard-doctors__label label-dashboard">Телефон</label>
+                                            <input id="profileFormPhone" autocomplete='off' type='tel' name='form[]'
+                                                value="97 000 000"
+                                                class='add-block-dashboard-doctors__input add-block-dashboard-doctors__input_phone input-dashboard'>
+                                        </div>
+                                        <div class="add-block-dashboard-doctors__item">
+                                            <label for="profileFormPosition"
+                                                class="add-block-dashboard-doctors__label label-dashboard">Посада</label>
+                                            <input id="profileFormPosition" autocomplete='off' type='text' name='form[]'
+                                                value="Посада"
+                                                class='add-block-dashboard-doctors__input input-dashboard'>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type='submit'
+                                    class='add-block-dashboard-doctors__btn btn_panel btn_panel-save'>Зберегти</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="main-dashboard-doctors__row">
+                        <div class="main-dashboard-doctors__doctors-list doctors-list-dashboard-doctors">
+                            <div class="doctors-list-dashboard-doctors__body">
+                                <div class="main-dashboard-doctors__content">
+                                    <div class="main-dashboard-doctors__doctors doctors-main-dashboard-doctors">
+                                        <div class="doctors-main-dashboard-doctors__body">
+                                            <div
+                                                class="doctors-main-dashboard-doctors__content doctors-main-dashboard-doctors__content_doctors">
+                                                <div class="doctors-main-dashboard-doctors__scrollbar">
+                                                    <table
+                                                        class="doctors-main-dashboard-doctors__table table-list table-list_doctors">
+                                                        <thead class="table-list__header header-table-list">
+                                                            <tr class="header-table-list__row">
+                                                                <th class="header-table-list__column">
+                                                                    <span class="header-table-list__item">ПІБ
+                                                                        пацієнта</span>
+                                                                </th>
+                                                                <th class="header-table-list__column">
+                                                                    <span
+                                                                        class="header-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th class="header-table-list__column">
+                                                                    <span class="header-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th class="header-table-list__column">
+                                                                    <span class="header-table-list__item">Телефон</span>
+                                                                </th>
+                                                                <th class="header-table-list__column">
+                                                                    <span class="header-table-list__item">Дії</span>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-list__body body-table-list">
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr class="body-table-list__row">
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_name">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <div class="doctor-edit-image-block">
+                                                                            <div id="doctorsEditPreview"
+                                                                                class="doctor-edit-image-preview">
+                                                                            </div>
+                                                                            <input id="doctorsEditImage"
+                                                                                accept=".jpg, .png, .gif" type='file'
+                                                                                name='form[]'
+                                                                                class='doctor-edit-image-input'>
+
+                                                                        </div>
+                                                                        <input autocomplete='off' type='text'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="" class="item-body-table-list__link">
+                                                                            Прізвище Ім'я По-батькові
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_specialty">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span
+                                                                        class="body-table-list__item">Спеціальність</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_position">
+                                                                    <input autocomplete='off' type='text' name='form[]'
+                                                                        class='doctors-edt-input'>
+                                                                    <span class="body-table-list__item">Посада</span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_phone">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <input autocomplete='off' type='tel'
+                                                                            name='form[]' class='doctors-edt-input'>
+                                                                        <a href="tel:+38097000000"
+                                                                            class="item-body-table-list__link">
+                                                                            +(380) 97 000 00 00
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                                <th
+                                                                    class="body-table-list__column body-table-list__column_action">
+                                                                    <span
+                                                                        class="body-table-list__item item-body-table-list">
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_true doctors-edit-btn">
+                                                                            <img class="edit-img"
+                                                                                src="img/icons/edit.svg" alt="edit">
+                                                                            <img class="done-img"
+                                                                                src="img/icons/true.svg" alt="true">
+                                                                        </a>
+                                                                        <a href=""
+                                                                            class="item-body-table-list__btn item-body-table-list__btn_false doctors-delite-btn">
+                                                                            <img src="img/icons/minus.svg" alt="false">
+                                                                        </a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

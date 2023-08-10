@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Записи</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calendar-admin">
+            <aside class="calendar-admin__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_doctors.html" class="menu-sidebar__link">
+                                    <img src="img/icons/doctors.svg" alt="doctors">
+                                    <span>Лікарі</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item active">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/appointments.svg" alt="appointments">
+                                    <span>Записи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_services.html" class="menu-sidebar__link">
+                                    <img src="img/icons/services.svg" alt="services">
+                                    <span>Послуги</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="calendar-admin__main main-calendar-admin main-block">
+                <div class="main-calendar-admin__top-block top-block top-block_admin">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Прізвище Ім'я!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="" class="user-top-block__info">
+                                <span class="user-top-block__surname">Прізвище</span>
+                                <span class="user-top-block__name">Ім'я</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-calendar-admin__body main-body">
+                    <div class="main-calendar-admin__add-block add-block-calendar-admin">
+                        <div class="add-block-calendar-admin__body">
+                            <form action="#" class="add-block-calendar-admin__form">
+                                <div class="add-block-calendar-admin__title title-dashboard">Створити запис</div>
+                                <div class="add-block-calendar-admin__row">
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_name">
+                                        <label for="fullCalendarFormName"
+                                            class="add-block-calendar-admin__label label-dashboard">Назва
+                                            запису</label>
+                                        <input id="fullCalendarFormName" autocomplete='off' type='text' name='form[]'
+                                            value="Назва запису"
+                                            class='add-block-calendar-admin__input input-dashboard'>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_doctor">
+                                        <label for="fullCalendarFormDoctor"
+                                            class="add-block-calendar-admin__label label-dashboard">Лікар</label>
+                                        <div class="add-block-calendar-admin__doctors doctors-add-block-calendar-admin">
+                                            <div class="doctors-add-block-calendar-admin__body">
+                                                <div class="doctors-add-block-calendar-admin__input-block">
+                                                    <input id="fullCalendarFormDoctor" autocomplete='off' type='text'
+                                                        name='form[]' class='doctors-add-block-calendar-admin__input'
+                                                        value="Лук'янчук Іванна Василівна">
+                                                </div>
+                                                <div class="doctors-add-block-calendar-admin__items-block">
+                                                    <ul class="doctors-add-block-calendar-admin__list">
+                                                        <li class="doctors-add-block-calendar-admin__item">
+                                                            <a href=""
+                                                                class="doctors-add-block-calendar-admin__link">Лук'янчук
+                                                                Іванна Василівна</a>
+                                                        </li>
+                                                        <li class="doctors-add-block-calendar-admin__item">
+                                                            <a href=""
+                                                                class="doctors-add-block-calendar-admin__link">Лук'янчук
+                                                                Іванна Василівна</a>
+                                                        </li>
+                                                        <li class="doctors-add-block-calendar-admin__item">
+                                                            <a href=""
+                                                                class="doctors-add-block-calendar-admin__link">Лук'янчук
+                                                                Іванна Василівна</a>
+                                                        </li>
+                                                        <li class="doctors-add-block-calendar-admin__item">
+                                                            <a href=""
+                                                                class="doctors-add-block-calendar-admin__link">Лук'янчук
+                                                                Іванна Василівна</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_date">
+                                        <label for="fullCalendarFormDate"
+                                            class="add-block-calendar-admin__label label-dashboard">Дата</label>
+                                        <input id="fullCalendarFormDate" autocomplete='off' type='date' name='form[]'
+                                            value="2023-06-26" class='add-block-calendar-admin__input input-dashboard'>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_time">
+                                        <label for="fullCalendarFormTime"
+                                            class="add-block-calendar-admin__label label-dashboard">Час</label>
+                                        <div class="add-block-calendar-admin__time-items">
+                                            <div class="add-block-calendar-admin__time-from">
+                                                <span>З</span>
+                                                <input autocomplete='off' type='time' name='form[]' value="08:00"
+                                                    class='add-block-calendar-admin__input input-dashboard'>
+                                            </div>
+                                            <div class="add-block-calendar-admin__time-to">
+                                                <span>До</span>
+                                                <input autocomplete='off' type='time' name='form[]' value="10:00"
+                                                    class='add-block-calendar-admin__input input-dashboard'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_patient">
+                                        <label for="fullCalendarFormPatient"
+                                            class="add-block-calendar-admin__label label-dashboard">Пацієнт</label>
+                                        <input id="fullCalendarFormPatient" autocomplete='off' type='text' name='form[]'
+                                            value="Прізвище Ім'я По-батькові"
+                                            class='add-block-calendar-admin__input input-dashboard'>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_tel">
+                                        <label for="fullCalendarFormTel"
+                                            class="add-block-calendar-admin__label label-dashboard">Контактний
+                                            телефон</label>
+                                        <input id="fullCalendarFormTel" autocomplete='off' type='text' name='form[]'
+                                            value="97 000 000"
+                                            class='add-block-calendar-admin__input add-block-calendar-admin__input_tel input-dashboard'>
+                                    </div>
+                                    <div class="add-block-calendar-admin__item add-block-calendar-admin__item_message">
+                                        <label for="fullCalendarFormMessage"
+                                            class="add-block-calendar-admin__label label-dashboard">Назва
+                                            запису</label>
+                                        <textarea name="form[]" id="fullCalendarFormMessage"
+                                            class="add-block-calendar-admin__input-textarea textarea-dashboard">Повідомлення...</textarea>
+                                    </div>
+                                </div>
+                                <button type='submit'
+                                    class='add-block-calendar-admin__btn btn_panel btn_panel-save'>Зберегти</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="main-calendar-admin__row">
+                        <div class="main-calendar-admin__inner inner-calendar-admin">
+                            <div class="inner-calendar-admin__body">
+                                <div class="main-calendar-admin__content">
+                                    <div class="main-calendar-admin__item item-main-calendar-admin">
+                                        <div class="item-main-calendar-admin__body">
+                                            <div
+                                                class="item-main-calendar-admin__content item-main-calendar-admin__content_calendar">
+                                                <div class="item-main-calendar-admin__scrollbar">
+                                                    <div class="main-calendar-admin__full-calendar full-calendar">
+                                                        <div class="full-calendar__top">
+                                                            <a href=""
+                                                                class="full-calendar__btn-create btn_panel btn_panel-create-service">Створити
+                                                                запис</a>
+                                                            <div class="full-calendar__doctors doctors-full-calendar">
+                                                                <div class="doctors-full-calendar__body">
+                                                                    <form action="#"
+                                                                        class="doctors-full-calendar__form">
+                                                                        <div class="doctors-full-calendar__input-block">
+                                                                            <input autocomplete='off' type='text'
+                                                                                name='form[]'
+                                                                                class='doctors-full-calendar__input'
+                                                                                value="Лук'янчук І.В.">
+                                                                        </div>
+                                                                        <div class="doctors-full-calendar__items-block">
+                                                                            <ul class="doctors-full-calendar__list">
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.В.</a>
+                                                                                </li>
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.I.</a>
+                                                                                </li>
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.A.</a>
+                                                                                </li>
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.В.</a>
+                                                                                </li>
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.В.</a>
+                                                                                </li>
+                                                                                <li class="doctors-full-calendar__item">
+                                                                                    <a href=""
+                                                                                        class="doctors-full-calendar__link">Лук'янчук
+                                                                                        І.В.</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="full-calendar__agenda agenda-full-calendar">
+                                                                <button
+                                                                    class='agenda-full-calendar__button'>Тиждень</button>
+                                                                <ul class="agenda-full-calendar__list">
+                                                                    <li class="agenda-full-calendar__list-item"
+                                                                        data-dropdown="agendaWeek">Тиждень</li>
+                                                                    <li class="agenda-full-calendar__list-item"
+                                                                        data-dropdown="agendaDay">День</li>
+                                                                </ul>
+                                                                <input id="viewSelector" type='text' name='age'
+                                                                    value='agendaWeek'
+                                                                    class='full-calendar__input-hidden'>
+                                                            </div>
+                                                        </div>
+                                                        <div class="full-doctor-calendar" id='calendar-admin'></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/uk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

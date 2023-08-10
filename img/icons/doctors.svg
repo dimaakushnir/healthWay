@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.5" height="17.412" viewBox="0 0 19.5 17.412">
+  <g id="stethoscope_light" transform="translate(-2.781 -3.75)">
+    <circle id="Эллипс_132" data-name="Эллипс 132" cx="2" cy="2" r="2" transform="translate(17.531 8.831)" fill="none" stroke="#0ebab6" stroke-width="1.5"/>
+    <circle id="Эллипс_133" data-name="Эллипс 133" cx="0.5" cy="0.5" r="0.5" transform="translate(19.031 10.358)" fill="#0ebab6"/>
+    <circle id="Эллипс_134" data-name="Эллипс 134" cx="1.5" cy="1.5" r="1.5" transform="translate(7.256 12.57)" fill="#0ebab6"/>
+    <path id="Контур_264" data-name="Контур 264" d="M8.5,13.5c3.594,0,4.766-4.842,4.967-8a.95.95,0,0,0-.967-1h-1" transform="translate(0.427)" fill="none" stroke="#0ebab6" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="Контур_265" data-name="Контур 265" d="M8.5,13.5c-3.594,0-4.766-4.842-4.967-8a.95.95,0,0,1,.967-1h1" fill="none" stroke="#0ebab6" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="Контур_266" data-name="Контур 266" d="M18.5,12.5v2a5,5,0,0,1-5,5h0a5,5,0,0,1-5-5v-1" transform="translate(1.031 0.912)" fill="none" stroke="#0ebab6" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

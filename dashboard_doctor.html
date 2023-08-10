@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Панель лікаря</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="dashboard-doctor">
+            <aside class="dashboard-doctor__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item active">
+                                <a href="dashboard_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="calendar_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/calendar.svg" alt="calendar">
+                                    <span>Календар</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="dashboard-doctor__main main-dashboard-doctor main-block">
+                <div class="main-dashboard-doctor__top-block top-block top-block_doctor">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Іванно!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="doctor_profile_2.html" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="doctor_profile_2.html" class="user-top-block__info">
+                                <span class="user-top-block__surname">Лук'янчук</span>
+                                <span class="user-top-block__name">Іванна</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-dashboard-doctor__body main-body">
+                    <div class="main-dashboard-doctor__row">
+                        <div class="main-dashboard-doctor__content">
+                            <div class="main-dashboard-doctor__top top-main-dashboard-doctor">
+                                <div class="top-main-dashboard-doctor__patients">
+                                    <div class="top-main-dashboard-doctor__item item-top-main-dashboard-doctor">
+                                        <div class="item-top-main-dashboard-doctor__text">
+                                            У Вас
+                                            <span>Пацієнтів</span>
+                                        </div>
+                                        <div class="item-top-main-dashboard-doctor__number">70</div>
+                                    </div>
+                                </div>
+                                <div class="top-main-dashboard-doctor__appointments">
+                                    <div class="top-main-dashboard-doctor__item item-top-main-dashboard-doctor">
+                                        <div class="item-top-main-dashboard-doctor__text">
+                                            Загалом
+                                            <span>Записів</span>
+                                        </div>
+                                        <div class="item-top-main-dashboard-doctor__number">60</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-dashboard-doctor__patients patients-main-dashboard-doctor">
+                                <div class="patients-main-dashboard-doctor__body">
+                                    <div class="patients-main-dashboard-doctor__top">
+                                        <div class="patients-main-dashboard-doctor__title title-dashboard">Нещодавні
+                                            пацієнти</div>
+                                    </div>
+                                    <div class="patients-main-dashboard-doctor__content">
+                                        <div class="patients-main-dashboard-doctor__scrollbar">
+                                            <table
+                                                class="patients-main-dashboard-doctor__table table-list table-list_patients">
+                                                <thead class="table-list__header header-table-list">
+                                                    <tr class="header-table-list__row">
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">ПІБ пацієнта</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Дата</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Вік</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Телефон</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-list__body body-table-list">
+                                                    <tr class="body-table-list__row body-table-list__row_red">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">24</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row body-table-list__row_green">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">16</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row body-table-list__row_yellow">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">28</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row body-table-list__row_red">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">78</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row body-table-list__row_green">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">30</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row body-table-list__row_yellow">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href="" class="item-body-table-list__link">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_date">
+                                                            <span class="body-table-list__item">21.06.2023</span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">56</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_status">
+                                                            <span class="body-table-list__item">Статус</span>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-dashboard-doctor__calendar calendar-main-dashboard-doctor">
+                            <div class="calendar-main-dashboard-doctor__body">
+                                <form action="#" class="content-doctor-profile__form form form-dashboard-doctor">
+                                    <div class="content-doctor-profile__title">Календар</div>
+                                    <div class="form__calendar look-calendar">
+                                        <table id="calendar">
+                                            <thead class="calendar-top">
+                                                <tr class="ms">
+                                                    <td class="arrow arrow_left"><img src="img/icons/arrow.svg"
+                                                            alt="arrow">
+                                                    <td class="day" colspan="5">
+                                                    <td class="arrow arrow_right"><img src="img/icons/arrow.svg"
+                                                            alt="arrow">
+                                                    </td>
+                                                <tr class="dn">
+                                                    <td>Пон
+                                                    <td>Вів
+                                                    <td>Сер
+                                                    <td>Чет
+                                                    <td>П'ят
+                                                    <td>Суб
+                                                    <td>Нед
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        <input type="hidden" class="form__input form__input_calendar"
+                                            name="selected-date" value="">
+                                    </div>
+                                    <div class="form__appointments-today appointments-today-form">
+                                        <div class="appointments-today-form__title">Записи на сьогодні</div>
+                                        <ul class="appointments-today-form__items">
+                                            <li class="appointments-today-form__item item-appointments-today-form">
+                                                <div class="item-appointments-today-form__row">
+                                                    <div class="item-appointments-today-form__content">
+                                                        <div class="item-appointments-today-form__image">
+                                                            <img src="" alt="">
+                                                        </div>
+                                                        <div class="item-appointments-today-form__patient">
+                                                            <div class="item-appointments-today-form__name">Прізвище
+                                                                Ім'я
+                                                            </div>
+                                                            <div class="item-appointments-today-form__diagnosis">Діагноз
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-appointments-today-form__info">
+                                                        <div class="item-appointments-today-form__hours">13.00-14.00
+                                                        </div>
+                                                        <div class="item-appointments-today-form__status"></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li
+                                                class="appointments-today-form__item item-appointments-today-form item-appointments-today-form_cancelled">
+                                                <div class="item-appointments-today-form__row">
+                                                    <div class="item-appointments-today-form__content">
+                                                        <div class="item-appointments-today-form__image">
+                                                            <img src="" alt="">
+                                                        </div>
+                                                        <div class="item-appointments-today-form__patient">
+                                                            <div class="item-appointments-today-form__name">Прізвище
+                                                                Ім'я
+                                                            </div>
+                                                            <div class="item-appointments-today-form__diagnosis">Діагноз
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-appointments-today-form__info">
+                                                        <div class="item-appointments-today-form__hours">13.00-14.00
+                                                        </div>
+                                                        <div class="item-appointments-today-form__status">Скасовано
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

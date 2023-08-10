@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Профіль лікаря</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="profile-doctor">
+            <aside class="profile-doctor__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="calendar_doctor.html" class="menu-sidebar__link">
+                                    <img src="img/icons/calendar.svg" alt="calendar">
+                                    <span>Календар</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="profile-doctor__main main-profile-doctor main-block">
+                <div class="main-profile-doctor__top-block top-block top-block_doctor">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Іванно!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="" class="user-top-block__info">
+                                <span class="user-top-block__surname">Лук'янчук</span>
+                                <span class="user-top-block__name">Іванна</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-profile-doctor__body main-body">
+                    <div class="main-profile-doctor__password password-profile-doctor">
+                        <div class="password-profile-doctor__body">
+                            <form action="#" class="password-profile-doctor__form">
+                                <div class="password-profile-doctor__title title-dashboard">
+                                    Змінити пароль для <span>inbox@gmail.com</span>
+                                </div>
+                                <div class="password-profile-doctor__row">
+                                    <div class="password-profile-doctor__inputs">
+                                        <div class="password-profile-doctor__item">
+                                            <label for="profileFormNewPassword"
+                                                class="password-profile-doctor__label label-dashboard">Новий
+                                                пароль</label>
+                                            <input id="profileFormNewPassword" autocomplete='off' type='password'
+                                                name='form[]' class='password-profile-doctor__input input-dashboard'
+                                                placeholder="Пароль">
+                                        </div>
+                                        <div class="password-profile-doctor__item">
+                                            <label for="profileFormСonfirmPassword"
+                                                class="password-profile-doctor__label label-dashboard">Підтвердити
+                                                пароль</label>
+                                            <input id="profileFormСonfirmPassword" autocomplete='off' type='password'
+                                                name='form[]' class='password-profile-doctor__input input-dashboard'
+                                                placeholder="Пароль">
+                                        </div>
+                                    </div>
+                                    <button type='submit'
+                                        class='password-profile-doctor__btn btn_panel btn_panel-save'>Зберегти</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="main-profile-doctor__row">
+                        <div class="main-profile-doctor__settings settings-profile-doctor">
+                            <div class="settings-profile-doctor__body">
+                                <form action="#" class="settings-profile-doctor__form">
+                                    <div class="settings-profile-doctor__title title-dashboard">Налаштування профілю
+                                    </div>
+                                    <div class="settings-profile-doctor__row">
+                                        <div class="settings-profile-doctor__image image-settings-profile-doctor">
+                                            <div id="profileformPreview" class="image-settings-profile-doctor__preview">
+                                                <img src="img/doctors/1.jpg" alt="doctor">
+                                            </div>
+                                            <input id="profileFormImage" accept=".jpg, .png, .gif" type='file'
+                                                name='form[]' class='image-settings-profile-doctor__input-file'>
+                                            <div class="image-settings-profile-doctor__button">
+                                                <img src="img/icons/file-input.svg" alt="file-input">
+                                            </div>
+                                        </div>
+                                        <div class="settings-profile-doctor__info">
+                                            <div class="settings-profile-doctor__item">
+                                                <label for="profileFormSurname"
+                                                    class="settings-profile-doctor__label label-dashboard">Прізвище</label>
+                                                <input id="profileFormSurname" autocomplete='off' type='text'
+                                                    name='form[]' value="Лук'янчук"
+                                                    class='settings-profile-doctor__input input-dashboard'>
+                                            </div>
+                                            <div class="settings-profile-doctor__item">
+                                                <label for="profileFormName"
+                                                    class="settings-profile-doctor__label label-dashboard">Ім'я</label>
+                                                <input id="profileFormName" autocomplete='off' type='text' name='form[]'
+                                                    value="Іванна"
+                                                    class='settings-profile-doctor__input input-dashboard'>
+                                            </div>
+                                            <div class="settings-profile-doctor__item">
+                                                <label for="profileFormMiddleName"
+                                                    class="settings-profile-doctor__label label-dashboard">По-батькові</label>
+                                                <input id="profileFormMiddleName" autocomplete='off' type='text'
+                                                    name='form[]' value="Василівна"
+                                                    class='settings-profile-doctor__input input-dashboard'>
+                                            </div>
+                                            <div class="settings-profile-doctor__item">
+                                                <label for="profileFormSpecialty"
+                                                    class="settings-profile-doctor__label label-dashboard">Спеціальність</label>
+                                                <input id="profileFormSpecialty" autocomplete='off' type='text'
+                                                    name='form[]' value="Спеціальність"
+                                                    class='settings-profile-doctor__input input-dashboard'>
+                                            </div>
+                                            <div class="settings-profile-doctor__item">
+                                                <label for="profileFormPosition"
+                                                    class="settings-profile-doctor__label label-dashboard">Посада</label>
+                                                <input id="profileFormPosition" autocomplete='off' type='text'
+                                                    name='form[]' value="Посада"
+                                                    class='settings-profile-doctor__input input-dashboard'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settings-profile-doctor__about">
+                                        <label for="profileFormAbout"
+                                            class="settings-profile-doctor__label label-dashboard">Про
+                                            себе</label>
+                                        <textarea name="form[]" id="profileFormAbout"
+                                            class="settings-profile-doctor__textarea">Про себе...</textarea>
+                                    </div>
+                                    <button type='submit'
+                                        class='settings-profile-doctor__btn btn_panel btn_panel-save'>Зберегти</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="main-profile-doctor__certificates certificates-profile-doctor">
+                            <div class="certificates-profile-doctor__body">
+                                <form action="#" class="certificates-profile-doctor__form">
+                                    <div class="certificates-profile-doctor__title title-dashboard">Сертифікати
+                                    </div>
+                                    <ul class="certificates-profile-doctor__items">
+                                        <li class="certificates-profile-doctor__item">
+                                            <a href="" class="certificates-profile-doctor__name">Назва
+                                                сертифікату</a>
+                                        </li>
+                                        <li class="certificates-profile-doctor__item">
+                                            <a href="" class="certificates-profile-doctor__name">Назва
+                                                сертифікату</a>
+                                        </li>
+                                        <li class="certificates-profile-doctor__item">
+                                            <a href="" class="certificates-profile-doctor__name">Назва
+                                                сертифікату</a>
+                                        </li>
+                                    </ul>
+                                    <div class="certificates-profile-doctor__search-block">
+                                        <input type='search' name='form[]'
+                                            class='certificates-profile-doctor__search-input'
+                                            placeholder="Введіть назву сертифікату...">
+                                    </div>
+                                    <div class="certificates-profile-doctor__add-block">
+                                        <input autocomplete='off' type='file' name='form[]'
+                                            class='certificates-profile-doctor__file-input'>
+                                        <div class="certificates-profile-doctor__btn-add">Додати сертифікат</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

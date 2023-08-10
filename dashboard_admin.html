@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+    <title>Інфопанель</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="patient-info">
+            <div class="patient-info__body">
+                <div class="patient-info__content">
+                    <div class="patient-info__top">
+                        <div class="patient-info__title">Додаткова інформація</div>
+                        <a href="" class="patient-info__close">
+                            <img src="img/icons/close.svg" alt="close">
+                        </a>
+                    </div>
+                    <div class="patient-info__text"></div>
+                    <div class="patient-info__bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-admin">
+            <aside class="dashboard-admin__sidebar sidebar">
+                <div class="sidebar__body">
+                    <a href="" class="sidebar__close">
+                        <img src="img/icons/close.png" alt="close-icon">
+                    </a>
+                    <a href="" class="sidebar__logo">
+                        <img src="img/logo-icon.png" alt="logo-icon">
+                        <span>HealthyWay</span>
+                    </a>
+                    <nav class="sidebar__menu menu-sidebar">
+                        <ul class="menu-sidebar__list">
+                            <li class="menu-sidebar__item active">
+                                <a href="dashboard_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/dashboard.svg" alt="dashboard">
+                                    <span>Інфопанель</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/patients.svg" alt="patients">
+                                    <span>Пацієнти</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_doctors.html" class="menu-sidebar__link">
+                                    <img src="img/icons/doctors.svg" alt="doctors">
+                                    <span>Лікарі</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="calendar_admin.html" class="menu-sidebar__link">
+                                    <img src="img/icons/appointments.svg" alt="appointments">
+                                    <span>Записи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="" class="menu-sidebar__link">
+                                    <img src="img/icons/analyses.svg" alt="analyses">
+                                    <span>Аналізи</span>
+                                </a>
+                            </li>
+                            <li class="menu-sidebar__item">
+                                <a href="dashboard_services.html" class="menu-sidebar__link">
+                                    <img src="img/icons/services.svg" alt="services">
+                                    <span>Послуги</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="sidebar__btn-back">
+                        <img src="img/icons/arrow-back.svg" alt="arrow-back">
+                        <span>Вихід</span>
+                    </a>
+                </div>
+            </aside>
+            <main class="dashboard-admin__main main-dashboard-admin main-block">
+                <div class="main-dashboard-admin__top-block top-block top-block_admin">
+                    <div class="top-block__row">
+                        <div class="top-block__welcome welcome-top-block">
+                            <a href="" class="welcome-top-block__logo">
+                                <img src="img/logo-icon.png" alt="logo-icon">
+                            </a>
+                            <div class="welcome-top-block__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="welcome-text">Ласкаво просимо,</span>
+                            <a href="" class="welcome-top-block__name">Прізвище Ім'я!</a>
+                        </div>
+                        <div class="top-block__user user-top-block">
+                            <a href="" class="user-top-block__image">
+                                <img src="" alt="">
+                            </a>
+                            <a href="" class="user-top-block__info">
+                                <span class="user-top-block__surname">Прізвище</span>
+                                <span class="user-top-block__name">Ім'я</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-dashboard-admin__body main-body">
+                    <div class="main-dashboard-admin__row">
+                        <div class="main-dashboard-admin__content">
+                            <div class="main-dashboard-admin__top top-main-dashboard-admin">
+                                <div class="top-main-dashboard-admin__patients">
+                                    <div class="top-main-dashboard-admin__item item-top-main-dashboard-admin">
+                                        <div class="item-top-main-dashboard-admin__text">
+                                            Нових
+                                            <span>Пацієнтів</span>
+                                        </div>
+                                        <div class="item-top-main-dashboard-admin__number">9</div>
+                                    </div>
+                                </div>
+                                <div class="top-main-dashboard-admin__appointments">
+                                    <div class="top-main-dashboard-admin__item item-top-main-dashboard-admin">
+                                        <div class="item-top-main-dashboard-admin__text">
+                                            Нових
+                                            <span>Записів</span>
+                                        </div>
+                                        <div class="item-top-main-dashboard-admin__number">7</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-dashboard-admin__patients patients-main-dashboard-admin">
+                                <div class="patients-main-dashboard-admin__body">
+                                    <div class="patients-main-dashboard-admin__top">
+                                        <div class="patients-main-dashboard-admin__title title-dashboard">
+                                            Запити на запис
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="patients-main-dashboard-admin__content patients-main-dashboard-admin__content_requests">
+                                        <div class="patients-main-dashboard-admin__scrollbar">
+                                            <table
+                                                class="patients-main-dashboard-admin__table table-list table-list_requests">
+                                                <thead class="table-list__header header-table-list">
+                                                    <tr class="header-table-list__row">
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">ПІБ пацієнта</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Вік</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Телефон</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Інформація</span>
+                                                        </th>
+                                                        <th class="header-table-list__column">
+                                                            <span class="header-table-list__item">Дії</span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-list__body body-table-list">
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">45</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <span class="body-table-list__item">-</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">24</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <a href=""
+                                                                class="body-table-list__info-item patient-info-btn"
+                                                                data-info="Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти">
+                                                                Відкрити
+                                                            </a>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">78</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <span class="body-table-list__item">-</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">19</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <a href=""
+                                                                class="body-table-list__info-item patient-info-btn"
+                                                                data-info="Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти">
+                                                                Відкрити
+                                                            </a>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">56</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <a href=""
+                                                                class="body-table-list__info-item patient-info-btn"
+                                                                data-info="Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти страждання. Але щоб ви зрозуміли, звідки виникає це хибне уявлення людей, цуратись насолоди і вихваляти">
+                                                                Відкрити
+                                                            </a>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="body-table-list__row">
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_name">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <span class="item-body-table-list__image">
+                                                                    <img src="" alt="">
+                                                                </span>
+                                                                <a href=""
+                                                                    class="item-body-table-list__link patient-name">Прізвище
+                                                                    Ім'я
+                                                                    По-батькові</a>
+                                                            </span>
+                                                        </th>
+                                                        <th class="body-table-list__column body-table-list__column_age">
+                                                            <span class="body-table-list__item">30</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_phone">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href="tel:+38097000000"
+                                                                    class="item-body-table-list__link">+(380) 97 000
+                                                                    000</a>
+                                                            </span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_info">
+                                                            <span class="body-table-list__item">-</span>
+                                                        </th>
+                                                        <th
+                                                            class="body-table-list__column body-table-list__column_action">
+                                                            <span class="body-table-list__item item-body-table-list">
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_true">
+                                                                    <img src="img/icons/true.svg" alt="true">
+                                                                </a>
+                                                                <a href=""
+                                                                    class="item-body-table-list__btn item-body-table-list__btn_false">
+                                                                    <img src="img/icons/false.svg" alt="false">
+                                                                </a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-dashboard-admin__graphs graphs-main-dashboard-admin">
+                            <div class="graphs-main-dashboard-admin__items">
+                                <div
+                                    class="graphs-main-dashboard-admin__item graphs-main-dashboard-admin__item_сomposition-patients">
+                                    <div class="graphs-main-dashboard-admin__body">
+                                        <div class="graphs-main-dashboard-admin__title title-dashboard">
+                                            Склад пацієнтів</div>
+                                        <div class="graphs-main-dashboard-admin__content">
+                                            <div class="graphs-main-dashboard-admin__labels">
+                                                <div class="graphs-main-dashboard-admin__label">Старі пацієнти</div>
+                                                <div class="graphs-main-dashboard-admin__label">Нові пацієнти</div>
+                                            </div>
+                                            <canvas id="сomposition-patients"></canvas>
+                                            <div class="graphs-main-dashboard-admin__procent"></div>
+                                            <!-- <canvas id="сomposition-patients"></canvas> -->
+                                            <div class="graphs-main-dashboard-admin__info-label">За останні 3 місяці
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="graphs-main-dashboard-admin__item graphs-main-dashboard-admin__item_visiting-patients">
+                                    <div class="graphs-main-dashboard-admin__body">
+                                        <div class="graphs-main-dashboard-admin__title title-dashboard">
+                                            Відвідування пацієнтів</div>
+                                        <div class="graphs-main-dashboard-admin__content">
+                                            <canvas id="visiting-patients" width="425" height="290"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
