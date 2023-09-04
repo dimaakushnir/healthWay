@@ -11935,14 +11935,9 @@ body::-webkit-scrollbar {
     padding: 30px 0 60px 0;
   }
 }
-@media (max-width: 767.98px) {
-  .main-home {
-    padding: 30px 0 50px 0;
-  }
-}
 @media (max-width: 479.98px) {
   .main-home {
-    padding: 25px 0 40px 0;
+    padding: 25px 0 60px 0;
   }
 }
 .main-home__image-block {
@@ -12214,12 +12209,7 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 767.98px) {
   .main2-home {
-    margin: 0 0 60px 0;
-  }
-}
-@media (max-width: 479.98px) {
-  .main2-home {
-    margin: 0 0 40px 0;
+    margin: 0 0 70px 0;
   }
 }
 .main2-home__image-block {
@@ -12395,17 +12385,7 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 991.98px) {
   .services-home {
-    padding: 0 0 60px 0;
-  }
-}
-@media (max-width: 767.98px) {
-  .services-home {
-    padding: 0 0 45px 0;
-  }
-}
-@media (max-width: 479.98px) {
-  .services-home {
-    padding: 0 0 30px 0;
+    padding: 0 0 70px 0;
   }
 }
 .services-home__image-block {
@@ -12833,7 +12813,7 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 479.98px) {
   .doctors-home {
-    padding: 0 0 40px 0;
+    padding: 0 0 60px 0;
   }
 }
 .doctors-home__top {
@@ -13071,7 +13051,7 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 479.98px) {
   .reviews-home {
-    padding: 0 0 100px 0;
+    padding: 0 0 125px 0;
   }
 }
 .reviews-home__image-block {
