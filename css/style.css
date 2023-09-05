@@ -95,6 +95,7 @@ h6 {
 body {
   color: #000;
   font-size: 18px;
+  overflow-x: hidden;
 }
 body.lock {
   overflow: hidden;
@@ -3752,7 +3753,7 @@ body.lock {
   background-color: #FFFFFF;
   box-shadow: 0 50px 80px rgba(64, 147, 184, 0.09);
 }
-.header.header-fixed {
+.header.fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -11878,6 +11879,34 @@ body.lock {
   }
 }
 
+.home {
+  padding: 100px 0 0 0;
+}
+@media (max-width: 1209.98px) {
+  .home {
+    padding: 90px 0 0 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .home {
+    padding: 80px 0 0 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .home {
+    padding: 75px 0 0 0;
+  }
+}
+@media (max-width: 479.98px) {
+  .home {
+    padding: 70px 0 0 0;
+  }
+}
+@media (max-width: 380px) {
+  .home {
+    padding: 60px 0 0 0;
+  }
+}
 .main-home {
   padding: 0 65px;
   margin: 65px 0 140px 0;
