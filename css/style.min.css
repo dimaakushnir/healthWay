@@ -95,12 +95,10 @@ h6 {
 body {
   color: #000;
   font-size: 18px;
+  background-color: red;
 }
 body.lock {
   overflow: hidden;
-}
-body::-webkit-scrollbar {
-  width: 0px;
 }
 
 .wrapper {
@@ -3761,34 +3759,6 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   z-index: 100;
-}
-.header.header-fixed .header__row {
-  height: 90px;
-}
-@media (max-width: 1209.98px) {
-  .header.header-fixed .header__row {
-    height: 80px;
-  }
-}
-@media (max-width: 991.98px) {
-  .header.header-fixed .header__row {
-    height: 70px;
-  }
-}
-@media (max-width: 767.98px) {
-  .header.header-fixed .header__row {
-    height: 65px;
-  }
-}
-@media (max-width: 479.98px) {
-  .header.header-fixed .header__row {
-    height: 60px;
-  }
-}
-@media (max-width: 380px) {
-  .header.header-fixed .header__row {
-    height: 50px;
-  }
 }
 .header__row {
   position: relative;
